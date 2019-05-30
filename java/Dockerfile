@@ -15,6 +15,7 @@ RUN apt-get update && apt-get -y upgrade && apt-get update \
 && wget http://www.us.apache.org/dist/ant/binaries/apache-ant-1.10.6-bin.tar.gz \
 && tar -xf apache-ant-1.10.6-bin.tar.gz \
 && mv apache-ant-1.10.6 /opt \
-&& rm apache-ant* 
+&& rm apache-ant* \
+&& export LC_ALL=C.UTF-8
 
 ENV PATH ${PATH}:/opt/apache-ant-1.10.6/bin 
